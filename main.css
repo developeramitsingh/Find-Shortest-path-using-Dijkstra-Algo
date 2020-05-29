@@ -1,0 +1,172 @@
+
+body{
+  
+}
+
+.shortPathNode{
+  background-color: rgb(255, 254, 106) !important;
+  /*background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;*/
+  animation-name: triangletwo;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+ }
+
+
+@keyframes triangletwo {
+  0% {
+    transform: scale(.6);
+    transform: rotateZ(0deg) rotateX(-6deg) rotateY(-7deg);
+    background-color: rgb(255, 254, 106);
+  }
+
+  50% {
+    transform: scale(1.1);
+    transform: rotateZ(0deg) rotateX(-6deg) rotateY(-7deg);
+    background-color: rgb(255, 254, 106);
+  }
+
+  100% {
+    transform: scale(1.0);
+    transform: rotateZ(0deg) rotateX(-6deg) rotateY(-7deg);
+    background-color: rgb(255, 254, 106);
+  }
+}
+
+
+
+
+.visited{
+  border: 1px solid rgb(175, 216, 248);
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s; 
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(.3);
+    
+    background-color: rgba(0, 0, 66, 0.75);
+    border-radius: 100%;
+  }
+
+  50% {
+    background-color: rgba(17, 104, 217, 0.75);
+  }
+
+  75% {
+    transform: scale(1.1);
+    
+    background-color: rgba(0, 217, 159, 0.75)
+  }
+
+  100% {
+    transform: scale(1.0);
+    
+    background-color: rgba(0, 190, 218, 0.75);
+  }
+}
+
+
+#SearchButton{
+	position: fixed;;
+	top:50%;
+	right:50px;
+	padding:20px 10px;
+	cursor: pointer;
+	background: orange;
+	font-weight: bold;
+	z-index: 999;
+	border-style: none;
+	box-shadow: 0px 2px 10px 5px grey;
+}
+
+#ClearButton{
+	position: fixed;;
+	top:30%;
+	right:50px;
+	padding:20px 10px;
+	cursor: pointer;
+	background: orange;
+	font-weight: bold;
+	z-index: 999;
+	border-style: none;
+	box-shadow: 0px 2px 10px 5px grey;
+}
+
+#main{
+	width: 1050px;
+	height: 1050px;
+	border: 2px solid grey;
+	/*! transform-style: preserve-3d; */
+	/*! perspective: 100px; */
+  /*! transform: rotateZ(330deg) rotateX(295deg) rotateY(-27deg); */
+	/*! margin-left: 160px; */
+	/*! margin-top: -230px; */
+  background: #fff;
+}
+
+#wall{
+	transition: 0.5s;
+	border: 0px solid #e8e8e8;
+	border-radius: 0px;
+  perspective: 100px;
+  transform-style: preserve-3d;
+	/*transition:0.2s;*/
+  border: 1px solid red;
+  
+  background-image: url('images/crack.png');
+  background-repeat: no-repeat;
+  background-size: 110px 100px;
+  
+}
+@keyframes animatePoint{
+	0%{
+		box-shadow: 0px 0px 10px 10px lightgrey inset; 
+	}
+
+	100%{
+		box-shadow: 0px 0px 10px 10px lightgrey inset; 
+	}
+}
+
+#Police{
+	position: absolute;
+	top:0px;
+	left:10px;	
+	/*! box-shadow: 0px 11px 5px 5px gray; */
+}
+
+#Thief{
+	position: absolute;
+	top:50px;
+	left:189px;	
+}
+
+table{
+	user-select: none;
+  
+  perspective: 100px;
+}
+td{
+  padding:20px;
+  border: 1px solid #e8e8e8;
+  margin: 0px;
+  background: #fff;
+  /*! transform-style: preserve-3d; */
+  /*! transform: rotateZ(0deg) rotateX(-6deg) rotateY(-7deg); */
+  /*! box-shadow: 0px -21px 12px 5px #e3e3e3 inset; */
+}
